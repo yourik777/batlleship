@@ -7,11 +7,11 @@ public class Test {
         JFrame frame = new JFrame("Морской бой");
         JPanel panel = new JPanel();
         JPanel panelButton = new JPanel();
-        frame.setSize(500,500);
-        panelButton.setSize(100,500);
+        frame.setSize(500,310);
+        panelButton.setSize(100,600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
-        frame.setLayout(new GridLayout(6,1));
+        frame.setLayout(new GridBagLayout());
         panel.setLayout(new GridLayout(9,9));
 
         int k=1;
@@ -41,15 +41,18 @@ public class Test {
         panelButton.add(editbutton);
         panelButton.add(gamebutton);
 
-        GridBagConstraints c = new GridBagConstraints();
-        c.gridheight = 5;
-        c.gridwidth = 1;
+ //       GridBagConstraints c = new GridBagConstraints();
+  //      c.gridx=0;
+  //      c.gridy=0;
+  //      c.gridheight = 10;
+  //      c.gridwidth = 1;
+  //      c.anchor = GridBagConstraints.NORTH;
 
-     //   frame.add(panel, new GridBagConstraints(1,5,0,0,0.0,0.9,GridBagConstraints.NORTH, GridBagConstraints.HORIZONTAL, new Insets(30,0,0,0),0,0));
-        frame.add(panel, c);
+        frame.add(panel, new GridBagConstraints(0,0,0,0,0,1,GridBagConstraints.NORTH, GridBagConstraints.NORTH, new Insets(0,0,0,0),0,0));
+     //   frame.add(panel, c);
 
 
-     //   frame.add(panelButton, new GridBagConstraints(1,6,0,0,0,1,GridBagConstraints.SOUTH, GridBagConstraints.SOUTH, new Insets(30,0,0,0),0,0));
+        frame.add(panelButton, new GridBagConstraints(0,0,0,0,0,1,GridBagConstraints.SOUTH, GridBagConstraints.NORTH, new Insets(0,0,0,0),0,0));
 
         frame.setVisible(true);
 
