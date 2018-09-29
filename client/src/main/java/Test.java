@@ -41,17 +41,7 @@ public class Test {
         panelButton.add(editbutton);
         panelButton.add(gamebutton);
 
- //       GridBagConstraints c = new GridBagConstraints();
-  //      c.gridx=0;
-  //      c.gridy=0;
-  //      c.gridheight = 10;
-  //      c.gridwidth = 1;
-  //      c.anchor = GridBagConstraints.NORTH;
-
         frame.add(panel, new GridBagConstraints(0,0,0,0,0,1,GridBagConstraints.NORTH, GridBagConstraints.NORTH, new Insets(0,0,0,0),0,0));
-     //   frame.add(panel, c);
-
-
         frame.add(panelButton, new GridBagConstraints(0,0,0,0,0,1,GridBagConstraints.SOUTH, GridBagConstraints.NORTH, new Insets(0,0,0,0),0,0));
 
         frame.setVisible(true);
